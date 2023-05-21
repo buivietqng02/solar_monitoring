@@ -1,0 +1,52 @@
+.profile-button {
+  .btn-dropdown {
+    background-color: transparent;
+    border: none;
+    color: #a4a5b3;
+    display: flex;
+    align-items: center;
+    &:hover {
+      color: #ffffff;
+    }
+  }
+  .menu-dropdown {
+    background: #292830;
+    border-radius: 4px;
+    min-width: 300px !important;
+    max-width: 380px !important;
+    padding: 20px;
+    .user-info {
+      width: 100%;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #8a8b99;
+      margin-bottom: 10px;
+      .user-name {
+        line-height: 28px;
+        font-size: 20px;
+        font-weight: 500;
+        color: #fff;
+      }
+      .email {
+        font-size: 14px;
+        font-weight: 400;
+        color: #8a8b99;
+        line-height: 20px;
+      }
+    }
+    .menu-dropdown-item {
+      color: #8a8b99;
+      padding: 10px 0px;
+      display: flex;
+      align-items: center;
+      background-color: transparent;
+      &:hover {
+        color: #fff;
+        background-color: transparent;
+      }
+      .icon {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
