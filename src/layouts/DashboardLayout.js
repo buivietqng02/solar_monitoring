@@ -18,7 +18,7 @@ export default function DashboardLayout({ children }) {
       <Topbar handleToggleSidebar={handleToggleSidebar} />
       <div
         className='w-100 d-flex'
-        style={{ height: 'calc(100vh - 70px)', overflow: 'hidden' }}
+        style={{ height: 'calc(100vh - 50px)', overflow: 'hidden' }}
       >
         <Sidebar
           collapsed={collapsed}
