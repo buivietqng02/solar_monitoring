@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import '../assets/styles/DashboardLayout.scss';
 import Sidebar from '../components/Sidebar';
 import Topbar from '../components/Topbar';
 import { Outlet } from 'react-router-dom';
@@ -10,22 +11,15 @@ export default function DashboardLayout({ children }) {
   };
   const [collapsed, setCollapsed] = useState(false);
   return (
-    <div
-      style={{
-        height: '100vh',
-      }}
-    >
+    <div className='dashboard-layout'>
       <Topbar handleToggleSidebar={handleToggleSidebar} />
-      <div
-        className='w-100 d-flex'
-        style={{ height: 'calc(100vh - 50px)', overflow: 'hidden' }}
-      >
+      <div className='mainview'>
         <Sidebar
           collapsed={collapsed}
           toggled={toggled}
           handleToggleSidebar={handleToggleSidebar}
         />
-        <div className='w-100 h-100' style={{ overflow: 'auto' }}>
+        <div className='children'>
           <Outlet />
         </div>
       </div>
