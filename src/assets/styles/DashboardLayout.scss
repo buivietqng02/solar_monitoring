@@ -1,0 +1,14 @@
+.dashboard-layout {
+  height: var(--window-height);
+  overflow: hidden;
+  width: 100%;
+  .mainview {
+    height: calc(100% - 50px);
+    display: flex;
+    .children {
+      height: 100%;
+      overflow: auto;
+      flex: 1;
+    }
+  }
+}
