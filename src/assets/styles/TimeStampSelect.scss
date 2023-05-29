@@ -1,0 +1,20 @@
+.timestamp-select {
+  .ant-radio-button-wrapper {
+    color: #ccc;
+  }
+  .ant-radio-button-wrapper {
+    background-color: rgba(0, 0, 0, 0.4);
+    border-color: #28c6de;
+  }
+  .ant-radio-button-wrapper-checked {
+    background-color: #28c6de;
+    border-color: #28c6de !important;
+    color: white;
+  }
+  .ant-radio-button-wrapper-checked:not(
+      .ant-radio-button-wrapper-disabled
+    ):focus-within {
+    box-shadow: none;
+    color: white;
+  }
+}
