@@ -6,6 +6,10 @@ import { useState } from 'react';
 import TimeStampSelect from '../components/TimeStampSelect';
 import DateSelect from '../components/DateSelect';
 import ReactApexChart from 'react-apexcharts';
+import MyTable from '../components/MyTable';
+import InverterIcon from '../assets/icons/inverter.png';
+import MeterIcon from '../assets/icons/meter.png';
+import GridIcon from '../assets/icons/grid.png';
 
 export default function SiteView() {
   const [timeStamp, setTimeStamp] = useState('date');
@@ -317,6 +321,88 @@ export default function SiteView() {
       },
     ],
   };
+  const columnsTableInverter = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+      width: 250,
+    },
+    {
+      title: 'Yield',
+      dataIndex: 'yield',
+      key: 'yield',
+    },
+    {
+      title: 'Production(kWh)',
+      dataIndex: 'production',
+      key: 'production',
+      width: 160,
+    },
+    {
+      title: 'Power Ratio(%)',
+      dataIndex: 'power_ratio',
+      key: 'power_ratio',
+    },
+  ];
+  const [dataSourceTableInv, setDataSourceTableInv] = useState([
+    {
+      key: '1',
+      name: 'FULUH_Canteen 1_Inverter 1',
+      yield: 3.1,
+      production: 341.49,
+      power_ratio: 0,
+    },
+    {
+      key: '2',
+      name: 'FULUH_Canteen 1_Inverter 1',
+      yield: 3.1,
+      production: 341.49,
+      power_ratio: 0,
+    },
+    {
+      key: '3',
+      name: 'FULUH_Canteen 1_Inverter 1',
+      yield: 3.1,
+      production: 341.49,
+      power_ratio: 0,
+    },
+    {
+      key: '4',
+      name: 'FULUH_Canteen 1_Inverter 1',
+      yield: 3.1,
+      production: 341.49,
+      power_ratio: 0,
+    },
+    {
+      key: '5',
+      name: 'FULUH_Canteen 1_Inverter 1',
+      yield: 3.1,
+      production: 341.49,
+      power_ratio: 0,
+    },
+    {
+      key: '6',
+      name: 'FULUH_Canteen 1_Inverter 1',
+      yield: 3.1,
+      production: 341.49,
+      power_ratio: 0,
+    },
+    {
+      key: '7',
+      name: 'FULUH_Canteen 1_Inverter 1',
+      yield: 3.1,
+      production: 341.49,
+      power_ratio: 0,
+    },
+    {
+      key: '8',
+      name: 'FULUH_Canteen 1_Inverter 1',
+      yield: 3.1,
+      production: 341.49,
+      power_ratio: 0,
+    },
+  ]);
   return (
     <MainviewLayout>
       <div className='siteview'>
@@ -446,6 +532,45 @@ export default function SiteView() {
                   type='line'
                   height={250}
                 />
+              </div>
+            </div>
+          </div>
+          <div className='inverter-production-section'>
+            <div className='inverter-ranking'>
+              <div className='title'>Inverter ranking</div>
+              <div className='content'>
+                <MyTable
+                  dataSource={dataSourceTableInv}
+                  columns={columnsTableInverter}
+                  pagination={false}
+                  scroll={{
+                    x: 700,
+                    y: 300,
+                  }}
+                />
+              </div>
+            </div>
+            <div className='production-info'>
+              <div className='title'>Production</div>
+              <div className='content'>
+                <div className='d-flex align-items-start'>
+                  <div className='item'>
+                    <img src={InverterIcon} className='icon' />
+                    <div className='label'>Inverter</div>
+                    <div className='value'>3.71 Mwh</div>
+                  </div>
+                  <div className='arrow-line'></div>
+                  <div className='item'>
+                    <img src={MeterIcon} className='icon' />
+                    <div className='label'>Energy Meter</div>
+                    <div className='value'>3.69 Mwh</div>
+                  </div>
+                  <div className='arrow-line'></div>
+                  <div className='item'>
+                    <img src={GridIcon} className='icon' />
+                    <div className='label'>Grid</div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
