@@ -8,7 +8,7 @@
       tr {
         th {
           height: 50px;
-          background-color: rgba(0, 0, 0, 0.2);
+          background-color: #062a3c;
           border: none;
           color: hsla(0, 0%, 100%, 0.6);
         }
@@ -19,12 +19,12 @@
         td {
           height: 50px;
           color: #ffffff;
-          background-color: transparent;
+          background-color: #10364f;
           border-color: rgba(0, 0, 0, 0.2);
         }
         &:nth-child(2n) {
           td {
-            background-color: rgb(12, 62, 82);
+            background-color: #103e5e;
             border-color: rgba(0, 0, 0, 0.2);
           }
         }
