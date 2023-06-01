@@ -7,6 +7,7 @@ import PrivateRoute from './utils/PrivateRoute';
 import SignIn from './pages/SignIn';
 import DashboardLayout from './layouts/DashboardLayout';
 import SiteView from './pages/SiteView';
+import FleetView from './components/FleetView/FleetView';
 
 function App() {
   const windowHeight = () => {
@@ -22,7 +23,9 @@ function App() {
         <Route path='/sign-in' element={<SignIn />} />
         <Route element={<DashboardLayout />}>
           <Route path='/site-monitor/siteview' element={<SiteView />} />
+          <Route path='/central-monitor/fleetview' element={<FleetView />}/>
         </Route>
+        
       </Routes>
     </BrowserRouter>
   );
