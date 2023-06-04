@@ -50,6 +50,7 @@ export default function DeviceList() {
   const handleChangeFilter = (e) => {
     setSelectedFilter(e.target.value);
   };
+  //For inverter table
   const columnsTableInverter = [
     {
       title: 'Name',
@@ -216,6 +217,223 @@ export default function DeviceList() {
       production: 341.49,
     },
   ]);
+  //For meter table
+  const columnsTableMeter = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+      width: 250,
+      fixed: 'left',
+      render: (value, data) => (
+        <Link
+          style={{
+            color: '#ffffff',
+          }}
+          to={`/site-monitor/devicelist/details/${data.key}`}
+        >
+          {value}
+        </Link>
+      ),
+    },
+    {
+      title: 'Type',
+      dataIndex: 'type',
+      key: 'type',
+      width: 160,
+    },
+    {
+      title: 'Attribute',
+      dataIndex: 'attribute',
+      key: 'attribute',
+      width: 160,
+    },
+    {
+      title: 'State',
+      dataIndex: 'status',
+      key: 'status',
+      width: 160,
+    },
+    {
+      title: 'Active Generated',
+      dataIndex: 'active_generated',
+      key: 'active_generated',
+      width: 200,
+    },
+    {
+      title: 'Active Consumed',
+      dataIndex: 'active_consumed',
+      key: 'active_consumed',
+      width: 200,
+    },
+    {
+      title: 'Reactive Consumed',
+      dataIndex: 'reactive_consumed',
+      key: 'reactive_consumed',
+      width: 200,
+    },
+    {
+      title: 'Reactive Consumed',
+      dataIndex: 'reactive_consumed',
+      key: 'reactive_consumed',
+      width: 200,
+    },
+  ];
+  const [dataSourceTableMeter, setDataSourceTableMeter] = useState([
+    {
+      key: '1',
+      name: 'Fuluh_Canteen 1_EMT',
+      type: 'Energy Meter',
+      attribute: 'Main Meter',
+      status: 'Night State',
+      active_generated: 1808594.75,
+      active_consumed: 425.24,
+      reactive_generated: 31950.76,
+      reactive_consumed: 32462.35,
+    },
+    {
+      key: '2',
+      name: 'Fuluh_Canteen 1_EMT',
+      type: 'Energy Meter',
+      attribute: 'Main Meter',
+      status: 'Night State',
+      active_generated: 1808594.75,
+      active_consumed: 425.24,
+      reactive_generated: 31950.76,
+      reactive_consumed: 32462.35,
+    },
+    {
+      key: '3',
+      name: 'Fuluh_Canteen 1_EMT',
+      type: 'Energy Meter',
+      attribute: 'Main Meter',
+      status: 'Night State',
+      active_generated: 1808594.75,
+      active_consumed: 425.24,
+      reactive_generated: 31950.76,
+      reactive_consumed: 32462.35,
+    },
+    {
+      key: '4',
+      name: 'Fuluh_Canteen 1_EMT',
+      type: 'Energy Meter',
+      attribute: 'Main Meter',
+      status: 'Night State',
+      active_generated: 1808594.75,
+      active_consumed: 425.24,
+      reactive_generated: 31950.76,
+      reactive_consumed: 32462.35,
+    },
+  ]);
+  //For weather station table
+  const columnsTableWS = [
+    {
+      title: 'Name',
+      dataIndex: 'name',
+      key: 'name',
+      width: 250,
+      fixed: 'left',
+      render: (value, data) => (
+        <Link
+          style={{
+            color: '#ffffff',
+          }}
+          to={`/site-monitor/devicelist/details/${data.key}`}
+        >
+          {value}
+        </Link>
+      ),
+    },
+    {
+      title: 'State',
+      dataIndex: 'status',
+      key: 'status',
+      width: 160,
+    },
+    {
+      title: 'POA (W/㎡)',
+      dataIndex: 'poa',
+      key: 'poa',
+      width: 160,
+    },
+    {
+      title: 'POA2 (W/㎡)',
+      dataIndex: 'poa2',
+      key: 'poa2',
+      width: 160,
+    },
+
+    {
+      title: 'GHI (W/㎡)',
+      dataIndex: 'ghi',
+      key: 'ghi',
+      width: 160,
+    },
+    {
+      title: 'Ambient Temp. (℃)',
+      dataIndex: 'ambient_temp',
+      key: 'ambient_temp',
+      width: 200,
+    },
+    {
+      title: 'Module Temp. 1 (℃)',
+      dataIndex: 'module_temp_1',
+      key: 'module_temp_1',
+      width: 200,
+    },
+    {
+      title: 'Humidity (%)',
+      dataIndex: 'humidity',
+      key: 'humidity',
+      width: 160,
+    },
+  ];
+  const [dataSourceTableWS, setDataSourceTableWS] = useState([
+    {
+      key: '1',
+      name: 'VN_Fuluh_VNS800',
+      status: 'Night State',
+      poa: 987,
+      poa2: '--',
+      ghi: 567,
+      ambient_temp: 25.1,
+      module_temp_1: 26,
+      humidity: 88,
+    },
+    {
+      key: '2',
+      name: 'VN_Fuluh_VNS800',
+      status: 'Night State',
+      poa: 987,
+      poa2: '--',
+      ghi: 567,
+      ambient_temp: 25.1,
+      module_temp_1: 26,
+      humidity: 88,
+    },
+    {
+      key: '3',
+      name: 'VN_Fuluh_VNS800',
+      status: 'Night State',
+      poa: 987,
+      poa2: '--',
+      ghi: 567,
+      ambient_temp: 25.1,
+      module_temp_1: 26,
+      humidity: 88,
+    },
+    {
+      key: '4',
+      name: 'VN_Fuluh_VNS800',
+      status: 'Night State',
+      poa: 987,
+      poa2: '--',
+      ghi: 567,
+      ambient_temp: 25.1,
+      module_temp_1: 26,
+      humidity: 88,
+    },
+  ]);
   return (
     <MainviewLayout>
       <div className='devicelist'>
@@ -249,15 +467,39 @@ export default function DeviceList() {
             </div>
           </div>
           <div className='table-section'>
-            <MyTable
-              dataSource={dataSourceTableInv}
-              columns={columnsTableInverter}
-              pagination={false}
-              scroll={{
-                x: 1000,
-                y: 300,
-              }}
-            />
+            {selectedDeviceKind === 'inverter' && (
+              <MyTable
+                dataSource={dataSourceTableInv}
+                columns={columnsTableInverter}
+                pagination={false}
+                scroll={{
+                  x: 1000,
+                  y: 300,
+                }}
+              />
+            )}
+            {selectedDeviceKind === 'meter' && (
+              <MyTable
+                dataSource={dataSourceTableMeter}
+                columns={columnsTableMeter}
+                pagination={false}
+                scroll={{
+                  x: 1000,
+                  y: 300,
+                }}
+              />
+            )}
+            {selectedDeviceKind === 'weather_station' && (
+              <MyTable
+                dataSource={dataSourceTableWS}
+                columns={columnsTableWS}
+                pagination={false}
+                scroll={{
+                  x: 1000,
+                  y: 300,
+                }}
+              />
+            )}
           </div>
         </div>
       </div>
